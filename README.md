@@ -5,6 +5,7 @@
 ## Process
 ![user_engagement](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/e37c8b4e-4deb-46b2-905c-f5c04f067548)
 ## Analysis
+### Activity Level Breakdown
 ![activity_level_breakdown](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/602bb2b4-57e3-4558-8764-98bfc624d3f4)
 
 ### Active Minutes vs Calories Burned
