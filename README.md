@@ -120,37 +120,14 @@ The graph below shows steps taken during certain times of the day.
 
 We see 2 major peaks during lunchtime at **12:00-2:00 PM** and then the largest peak from **5:00-7:00 PM**. This tells me that people were most active during the time they were not at work.
 ## Recommendations
-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Due to the heavier correlation between time spent active and calories burned as opposed to number of steps taken you could add reminders about CDC recommendations about exercise and active living.
+  - 150 minutes of moderate physical activity a week
+  - 10,000 steps a day for weight loss
+- Due to the low number of people participating in the weight log, you could look into developing a smart device (scale) that could automatically upload your weight information and sync it with all the metrics uploaded into the Bellabeat app through the vairety of other Bellabeat products.
+  - You could even implement a design in which this information could be remotely shared with a physician, like an OBGYN or other health professional that could benefit from this information.
+  - This could open up a market into advertising the Bellabeat product line through medical applications, especially like pregnancy or eating disorders.
+- Due to the low product engagement from some individuals, you could add implement a notification that could remind you if you are leaving behind your smart device. Similar to the way Apple utilizes the AirTag.
+  - This should result in a more positive change in product engagement.  
+- Since you are already tracking heart rate information through the other Bellabeat products you could train them to track your normal heart rate patterns and abnormal heart rate patterns. This can give advanced warnings about heart attacks or other heart arrhytmias.
 
 
