@@ -39,9 +39,7 @@ Bellabeat is a woman-owned tech company that focuses on mindfulness, fitness, an
 - Many of the columns in the data do no specify what metric was used for measurement. I would have liked more clarification on this front.
 ## Process
   While familiarizing myself with the data I found that many of the entries in the dailyActivity_merged.csv file showed 0 for tracker distance, 0 for total steps, and 1440 for sedentary minutes. This indicated to me that the user did not wear their smart device at all that day as 1440 minutes equates to 24 hours. I sorted these columns in ascending order and removed anything that met that criteria. After removal I used a count function in a pivot table to count the number of days per user. The data yielded the graph below.
-
-![user_engagement](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/c7b0e4fc-dc3c-4e31-b705-052e6e85e6f6)
-
+![user_engagement](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/059c74ec-712f-4d8b-aaf0-d47ac5643883)
 The above graph shows me information about the overall health of the dataset and also where things like product engagment can be improved. The average product engagement over the 31 day period was 84%.
 
 The other main change that was needed to make to the files had to do with fixing an issue with the datetime for all the hourly and seconds tables. The format used during data collection would not properly upload for SQL analysis. This could be fixed by importing all the columns from the table as a string type and then recasting them using the following code.
@@ -76,13 +74,13 @@ The only table that was excluded from analysis due to low participants was weigh
 ## Analysis
 ### Activity Level Breakdown
 Before anything else I want to get an idea for how much time was spent in at each level of intensity across all the participants.
-![activity_level_breakdown](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/5d97ec9c-7ec4-4f90-8a18-0d1b16701725)
+![activity_level_breakdown](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/7d2e4807-04e5-4e66-9aba-5b6f97a256ae)
 The main finding of interest was that the percentage of time spent very active was greater than the amount of time spent at a fairly active level. It is relatively expected that ~75% of the time was spent sedentary since most people that wear Fitbits are adults and a large percentage of adults work sedentary jobs.
 ### Active Minutes vs Calories Burned
 After seeing a high level distribution of how much time was spent at each intensity level I wanted to get a better idea of how much time spent in each intensity level affected calories burned. The 3 graphs side by side show the 3 active intensities and how each affects calories burned. Relatively positive correlations are expected here.
 | Lightly Active Minutes | Fairly Active Minutes | Very Active Minutes |
 | ---------- | ---------- | ---------- |
-| ![lightlyActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/940f9d32-b16e-4b7b-a7ec-ade4878e979e) | ![fairlyActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/545c68fa-4469-45bb-bb8e-d0495cee7cd0) | ![veryActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/69fa8657-c5ab-4cfa-a5ec-4eac2cfee865) |
+| ![lightlyActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/e5b09db9-a9d6-4962-bdd9-1066a8e5e039) | ![fairlyActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/1def19b6-24da-4689-b930-ad91fe0eca9d) | ![veryActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/9145c1c1-91a1-4cdc-a14b-2c73744d6539) |
 
 Looking at these three graphs yields the following R<sup>2</sup> scores:
 - Lightly Active: 0.1946 = **19%**
@@ -96,28 +94,23 @@ In order to try and find a stronger correlation I aggregated the activity level 
 =SUM(C2+(D2*2)+(E2*3))
 ```
 This formula gives more weight to the fairly active minutes (D2) and the most weight to very active minutes (E2). Once this formula was run it yielded the below graph.
-![aggregatedActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/5c65eaee-8294-472c-8179-40ad7e70dc01)
-
+![aggregatedActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/568b3154-100c-48be-a4de-1b2028684542)
 The R<sup>2</sup> Score for this relationship was **57%**. A stronger correlation than the 44% from very active minutes.
 ### Calories vs Steps
 Looking further for different trends in the data I wanted to analyze the relationship between the total number of steps in a day and the effect it had on the amount of calories burned. The data yielded the graph below. 
-![calories_vs_totalSteps](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/53f02593-90f0-4664-a68a-f4798f665612)
-
+![calories_vs_totalSteps](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/a2222476-bc6e-414d-b69f-29bf861af02d)
 The R<sup>2</sup> score for this relationship was **31%**. Honestly I was expecting a higher correlation score due to the CDC recommendation to get at least 10,000 steps daily. However, it now makes more sense that the updated recommendation is to get 150 minutes of moderate intensity exercise weekly. This is consistent with the correlation data I have found to this point. 
 
 Because the data seemed messy in the visualization I averaged the calories burned per day and the average amount of steps per day by individual. The idea being that perhaps this might show a stronger relationship. The graph below shows the results.
-![calories_vs_stepsByIndividual](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/3d0a9e3f-57a9-48a7-a617-af4ad9252122)
-
+![calories_vs_stepsByIndividual](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/53fea44f-72e8-4239-9831-8f9fc28b92e1)
 The R<sup>2</sup> score for this graph was a weaker **15%**. Indicating to me that I was more right to use the raw data as opposed to the averaged data.
 ### Activity by Time
 Finally I wanted to see the high level trend between time and steps taken. First by the day of the week, to see if people would be more active during the weekday vs the weekend. Then second by the time of the day to see at what times during the day are people most active. Below is the graph showing total steps taken by every participant by the day of the week.
-![steps_by_dayofWeek](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/8332e415-6410-48fd-b6eb-1edd7fdb8af3)
-
+![steps_by_dayofWeek](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/d7e75126-1000-4d49-9827-e47441875f2b)
 The finding of interest here is that overall people are more active during the weekday than the weekend with their activity peaking on Tuesday and gradually falling off from that until Friday. The other finding is that people appeared to be more active on Saturday than on Sunday.
 
 The graph below shows steps taken during certain times of the day. 
-![steps_by_timeofDay](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/fe478014-adca-4446-b751-dee8c260e77e)
-
+![steps_by_timeofDay](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/e96e1cc5-c080-4a5b-9e9b-1e851ca4c9f9)
 We see 2 major peaks during lunchtime at **12:00-2:00 PM** and then the largest peak from **5:00-7:00 PM**. This tells me that people were most active during the time they were not at work.
 ## Recommendations
 - Due to the heavier correlation between time spent active and calories burned as opposed to number of steps taken you could add reminders about CDC recommendations about exercise and active living.
