@@ -4,10 +4,10 @@ Author: Austin Elendt
 Date: 8/4/2023
 ## Company Information
 Bellabeat is a woman-owned tech company that focuses on mindfulness, fitness, and health. They are relatively small company with potential to expand their influence in the global smart device market. They have a respectable catalog of products which include:
-- Bellabeat App - provides users with health data related to activity, stress, heart rate, and menstrual cycles. The app also connects to any smart devices that the customer owns.
-- Leaf - a wellness tracker bracelet, necklace, or clip-on. The leaf  tracker connects to the Bellabeat app to track activity, sleep, and stress. 
-- Time - this wellness watch that combines a timepiece with smart technology to track user activity, sleep, and stress. This also connects to the Bellabeat app to provide data insights.
-- Spring - this is a water bottle that tracks your daily hydration using smart technology. This water bottle also connects to the Bellabeat app.
+- Bellabeat App - Provides users with health data related to activity, stress, heart rate, and menstrual cycles. The app also connects to any smart devices that the customer owns.
+- Leaf - A wellness tracker bracelet, necklace, or clip-on. The leaf  tracker connects to the Bellabeat app to track activity, sleep, and stress. 
+- Time - This wellness watch that combines a timepiece with smart technology to track user activity, sleep, and stress. This also connects to the Bellabeat app to provide data insights.
+- Spring - This is a water bottle that tracks your daily hydration using smart technology. This water bottle also connects to the Bellabeat app.
 - Bellabeat membership - This is a subscription based membership program that gives 24/7 personalized guidance and analytics for nutrition, activity, sleep, health, beauty, and mindfullness.
 ## Ask
 ### What is the Business Task?
