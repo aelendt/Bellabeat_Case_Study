@@ -42,7 +42,7 @@ Bellabeat is a woman-owned tech company that focuses on mindfulness, fitness, an
 ![user_engagement](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/059c74ec-712f-4d8b-aaf0-d47ac5643883)
 The above graph shows me information about the overall health of the dataset and also where things like product engagment can be improved. The average product engagement over the 31 day period was 84%.
 
-The other main change that was needed to make to the files had to do with fixing an issue with the datetime for all the hourly and seconds tables. The format used during data collection would not properly upload for SQL analysis. This could be fixed by importing all the columns from the table as a string type and then recasting them using the following code.
+The other main change that was needed had to do with fixing an issue with the datetime for all the hourly and seconds tables. The format used during data collection would not properly upload for SQL analysis. This could be fixed by importing all the columns from the table as a string type and then recasting them using the following code.
 
 ``` SQL
 SELECT
@@ -69,7 +69,7 @@ FROM
 Row: 1
 num_of_id: 33
 ```
-The only table that was excluded from analysis due to low participants was weightLongInfo_merged.csv with only 8 participants.
+The only table that was excluded from analysis due to low participants was weightLogInfo_merged.csv with only 8 participants.
 
 ## Analysis
 ### Activity Level Breakdown
@@ -93,13 +93,13 @@ In order to try and find a stronger correlation I aggregated the activity level 
 ```
 =SUM(C2+(D2*2)+(E2*3))
 ```
-This formula gives more weight to the fairly active minutes (D2) and the most weight to very active minutes (E2). Once this formula was run it yielded the below graph.
+This formula gives more weight to the fairly active minutes (D2) and the most weight to very active minutes (E2). Once this formula was run it yielded the graph below.
 ![aggregatedActiveMinutes_vs_calories](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/568b3154-100c-48be-a4de-1b2028684542)
 The R<sup>2</sup> Score for this relationship was **57%**. A stronger correlation than the 44% from very active minutes.
 ### Calories vs Steps
 Looking further for different trends in the data I wanted to analyze the relationship between the total number of steps in a day and the effect it had on the amount of calories burned. The data yielded the graph below. 
 ![calories_vs_totalSteps](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/a2222476-bc6e-414d-b69f-29bf861af02d)
-The R<sup>2</sup> score for this relationship was **31%**. Honestly I was expecting a higher correlation score due to the CDC recommendation to get at least 10,000 steps daily. However, it now makes more sense that the updated recommendation is to get 150 minutes of moderate intensity exercise weekly. This is consistent with the correlation data I have found to this point. 
+The R<sup>2</sup> score for this relationship was **31%**. Honestly, I was expecting a higher correlation score due to the CDC recommendation to get at least 10,000 steps daily. However, it now makes more sense that the updated recommendation is to get 150 minutes of moderate intensity exercise weekly. This is consistent with the correlation data I have found to this point. 
 
 Because the data seemed messy in the visualization I averaged the calories burned per day and the average amount of steps per day by individual. The idea being that perhaps this might show a stronger relationship. The graph below shows the results.
 ![calories_vs_stepsByIndividual](https://github.com/aelendt/Bellabeat-Case-Study/assets/136762105/53fea44f-72e8-4239-9831-8f9fc28b92e1)
@@ -118,9 +118,9 @@ We see 2 major peaks during lunchtime at **12:00-2:00 PM** and then the largest 
   - 10,000 steps a day for weight loss
 - Due to the low number of people participating in the weight log, you could look into developing a smart device (scale) that could automatically upload your weight information and sync it with all the metrics uploaded into the Bellabeat app through the vairety of other Bellabeat products.
   - You could even implement a design in which this information could be remotely shared with a physician, like an OBGYN or other health professional that could benefit from this information.
-  - This could open up a market into advertising the Bellabeat product line through medical applications, especially like pregnancy or eating disorders.
-- Due to the low product engagement from some individuals, you could add implement a notification that could remind you if you are leaving behind your smart device. Similar to the way Apple utilizes the AirTag.
-  - This should result in a more positive change in product engagement.  
+  - This could open up a market into advertising the Bellabeat product line for medical applications like pregnancy or eating disorders.
+- Due to the low product engagement from some individuals, you could implement a notification that could remind you if you are leaving behind your smart device. Similar to the way Apple utilizes the AirTag.
+  - This should result in a positive change in product engagement.  
 - Since you are already tracking heart rate information through the other Bellabeat products you could train them to track your normal heart rate patterns and abnormal heart rate patterns. This can give advanced warnings about heart attacks or other heart arrhytmias.
 
 
