@@ -116,7 +116,7 @@ We see 2 major peaks during lunchtime at **12:00-2:00 PM** and then the largest 
 - Due to the heavier correlation between time spent active and calories burned as opposed to number of steps taken you could add reminders about CDC recommendations about exercise and active living.
   - 150 minutes of moderate physical activity a week
   - 10,000 steps a day for weight loss
-- Due to the low number of people participating in the weight log, you could look into developing a smart device (scale) that could automatically upload your weight information and sync it with all the metrics uploaded into the Bellabeat app through the vairety of other Bellabeat products.
+- Due to the low number of people participating in the weight log, you could look into developing a smart device (scale) that could automatically upload your weight information and sync it with all the metrics uploaded into the Bellabeat app through the variety of other Bellabeat products.
   - You could even implement a design in which this information could be remotely shared with a physician, like an OBGYN or other health professional that could benefit from this information.
   - This could open up a market into advertising the Bellabeat product line for medical applications like pregnancy or eating disorders.
 - Due to the low product engagement from some individuals, you could implement a notification that could remind you if you are leaving behind your smart device. Similar to the way Apple utilizes the AirTag.
