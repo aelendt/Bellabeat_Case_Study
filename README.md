@@ -121,6 +121,6 @@ We see 2 major peaks during lunchtime at **12:00-2:00 PM** and then the largest 
   - This could open up a market into advertising the Bellabeat product line for medical applications like pregnancy or eating disorders.
 - Due to the low product engagement from some individuals, you could implement a notification that could remind you if you are leaving behind your smart device. Similar to the way Apple utilizes the AirTag.
   - This should result in a positive change in product engagement.  
-- Since you are already tracking heart rate information through the other Bellabeat products you could train them to track your normal heart rate patterns and abnormal heart rate patterns. This can give advanced warnings about heart attacks or other heart arrhytmias.
+- Since you are already tracking heart rate information through the other Bellabeat products you could train them to track your normal heart rate patterns and abnormal heart rate patterns. This can give advanced warnings about heart attacks or other heart arrhythmias.
 
 
