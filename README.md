@@ -21,7 +21,7 @@ Bellabeat is a woman-owned tech company that focuses on mindfulness, fitness, an
 
 ## Prepare
 ### Data Source
-  The data is publically available from Kaggle.com. It shows the user data from 33 Fitbit users over a 31 day period. The date ranges from April 2016 to May 2016. The data shows daily, hourly, and second data on a number or metrics. These metrics track heart rate, sleep time, GPS location (for distance traveled), number of steps taken, minutes spent at certain levels of intensity, and calories burned. The data can be downloaded from the link below.
+  The data is publically available from Kaggle.com. It shows the user data from 33 Fitbit users over a 31 day period. The date ranges from April 2016 to May 2016. The data shows daily, hourly, and second data on a number of metrics. These metrics track heart rate, sleep time, GPS location (for distance traveled), number of steps taken, minutes spent at certain levels of intensity, and calories burned. The data can be downloaded from the link below.
 
 [Fitbit Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit).
 
